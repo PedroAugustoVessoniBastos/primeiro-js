@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Atividade 4</title>
+</head>
+<body>
+    <p id="valor">Esse texto será alterado ao clicar no botão</p>
+    <button type="button"onclick='document.getElementById("valor").innerHTML = "Isso foi alterado"'>Me clique para alterar</button>
+
+    <br>
+    <hr>
+    <br>
+
+    <button onclick="document.getElementById('lampada').src='pic_bulbon.gif'">Ligue a lâmpada</button>
+    <img id="lampada" src="pic_bulboff.gif" style="width:100px">
+    <button onclick="document.getElementById('lampada').src='pic_bulboff.gif'">Desligue a lâmpada</button>
+    
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="texto">Esse texto ira se esconder ao clicar no botão.</h1>
+    <button type="button"onclick="document.getElementById('texto').style.display='none'">Clique para esconder o texto</button>
+
+    <br>
+    <hr>
+    <br>
+
+    <script>
+    console.log(20 * 2);
+    </script>
+
+    <script>
+     window.alert(20 * 2);
+    </script>
+    
+    <p id="multiplica"></p>
+    <script>document.getElementById("multiplica").innerHTML = 20 * 2; </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="carro"></h2>
+    <script>var carName = "Lotus";document.getElementById("carro").innerHTML = carName;</script>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+    <p id="subtraia"></p>
+    <script>
+    function myFunction(p1, p2) {
+    return p1 - p2;
+    }
+    let result = myFunction(14, 8);
+    document.getElementById("subtraia").innerHTML = result;
+
+    function myFunction(p1, p2) {
+    document.getElementById("subtraia").innerHTML = p1 - p2;
+    }
+    
+    myFunction(14, 8);
+    
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="saudacao"></p>
+
+    <script>
+    var saudacao;
+    var hora = new Date().getHours();
+    if (hora <= 0 && hora >=9) {
+    saudacao = "Hora do café da manhã";
+    }
+     else if (hora <=9 && hora >=13) {
+    saudacao = "Hora do Almoço";
+    }
+     else if (hora <=13 && hora >=18) {
+    saudacao = "Hora do Café da Tarde";
+    }
+     else {
+    saudacao = "Hora da Janta";
+    }
+    document.getElementById("saudacao").innerHTML = saudacao;
+    </script>
+</body>
+</html>
